@@ -8,8 +8,8 @@
     .config(['$routeProvider',
       function($routeProvider) {
         $routeProvider.
-          when('/page1', {
-            template: '<div>Page 1</div>',
+          when('/home', {
+            templateUrl: 'apps/home/home.view.html',
             //controller: 'AddOrderController'
           }).
           when('/page2', {
@@ -35,7 +35,7 @@
       } else {
           $log.log('>>> Not logged yet!');
           $rootScope.isLogged = false;
-          $window.location.href = '#/login';
+          $window.location.href = '#/home';
 
       }
 
