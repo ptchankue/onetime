@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+<body ng-app="myApp">
+<h1>Using multiple app in an Angular page</h1>
+    <h3>Controller from root app</h3>
+    <div ng-controller="myCtrl" >
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{firstName + " " + lastName}}
+    </div>
+
+    <h3>Controller from second app</h3>
+    <div ng-app="myApp2" ng-controller="otherCtrl">
+      My other name is : <b>{{first}}</b>
+    </div>
+
+<script>
+  var app = angular.module('myApp', ['myApp2'])
+  app.controller('myCtrl', function($scope){
+      $scope.firstName = "Robert";
+      $scope.lastName = "De Niro";
+  });
+
+  var app2 = angular.module('myApp2', [])
+  app2.controller('otherCtrl', function($scope){
+      $scope.first = "Robert, from App2";
+  })
+
+</script>
+
+</body>
+</html>
