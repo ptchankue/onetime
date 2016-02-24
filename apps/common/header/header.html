@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default ">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">OneTime</a>
@@ -9,7 +9,10 @@
       <li><a href="#/page1">Page 1</a></li>
       <li><a href="#/page2">Page 2</a></li>
 
-      <li><a href="#/login">Login</a></li>
+
+      <li ng-hide="isLogged"><a href="#/login">Login</a></li>
+      <li ng-show="isLogged"><a href="#/logout">Log out</a></li>
+
     </ul>
   </div>
 </nav>
