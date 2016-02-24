@@ -1,31 +1,23 @@
 (function () {
     'use strict';
+    angular.module('login.module', []);
+    angular.module('stream.module', []);
+    angular
+        .module('app',[
+                      'ngRoute',
 
-  angular
-    .module('app', ['ngRoute'])
-    .controller('MainCtrl', MainCtrl)
+                      'login.module',
+          ])
+        .controller('MainCtrl', MainCtrl)
+        .constant("myConfig", {
+              "mode": "dev",
+              "name": "OneTime",
+              "version": "1.0",
+              "company": "ACompanyName"
+        });
 
-    .config(['$routeProvider',
-      function($routeProvider) {
-        $routeProvider.
-          when('/home', {
-            templateUrl: 'apps/home/home.view.html',
-            //controller: 'AddOrderController'
-          }).
-          when('/page2', {
-            template: '<div>Page 2</div>',
-            //controller: 'ShowOrdersController'
-          }).
-          when('/login', {
-            templateUrl: 'apps/login/login.view.html',
-            //controller: 'ShowOrdersController'
-          }).
-          otherwise({
-            redirectTo: '/'
-          });
-      }]);
+    function MainCtrl($scope, $rootScope, $window, $log, myConfig) {
 
-    function MainCtrl($scope, $rootScope, $window, $log) {
       if ($window.localStorage['currentUser']) {
           $log.log('User is already logged!..');
           var user = JSON.parse($window.localStorage['currentUser'] || '{}');
@@ -35,10 +27,11 @@
       } else {
           $log.log('>>> Not logged yet!');
           $rootScope.isLogged = false;
-          $window.location.href = '#/home';
+          $window.location.href = '#/login';
 
       }
 
-    }
+    }//MainCtrl
+
 
 })();
