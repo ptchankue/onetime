@@ -1,6 +1,8 @@
-OneTime is a small project showing case how to structure a large angular JS app
+#OneTime 
 
-Running the project:
+OnTime is a small project showing case how to structure a large angular JS app
 
-python SimpleHTTPServer -m 8000
+Running the project on port 8000:
+
+python - m SimpleHTTPServer 8000
 
