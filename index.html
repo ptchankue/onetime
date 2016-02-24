@@ -6,7 +6,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cerulean/bootstrap.min.css">
-  <style>body { padding-top:50px; }</style>
+  <style>body { padding-top:10px; }</style>
 
   <!-- JS -->
   <script src="http://code.angularjs.org/1.4.0/angular.js"></script>
@@ -15,30 +15,20 @@
 
 <body class="container" ng-app="app" ng-controller="MainCtrl as main">
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">OneTime</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#/page1">Page 1</a></li>
-        <li><a href="#/page2">Page 2</a></li>
-        <li><a href="#/login">Login with Yookos</a></li>
-      </ul>
-    </div>
-  </nav>
 
-<div ng-view></div>
+  <div>
+    <h4>Main template</h4>
+  </div>
 
+  <div ng-view></div>
 
+  <!-- Custom modules -->
 
   <script src="app.js"></script>
 
   <script>
 
-
-
   </script>
+
 </body>
 </html>
