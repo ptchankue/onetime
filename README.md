@@ -32,19 +32,21 @@ Adding Jasmine (the testing framework)
 
 Structure of the karma.con.js
 
-			files: [
-			  'bower_components/angular/angular.js',
-			  'bower_components/angular-mocks/angular-mocks.js',
-			  'js/app.js',
-			  'tests/*.js'
-			],
+		files: [
+		  'bower_components/angular/angular.js',
+		  'bower_components/angular-mocks/angular-mocks.js',
+		  'js/app.js',
+		  'tests/*.js'
+		],
 
 A Example of test:
 
-			describe('example test', function() {
-			  it('should be true', function() {
-			    expect('foo').toBe('foo');
-			  });
-			});
+		describe('example test', function() {
+		  it('should be true', function() {
+		    expect('foo').toBe('foo');
+		  });
+		});
 
-			karma start
+Starting the watcher:
+
+		karma start
