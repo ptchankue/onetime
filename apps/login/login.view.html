@@ -1,18 +1,26 @@
+Still have acces to global variables, eg. isLogged: {{isLogged}}
+
 <form role="form">
 
   <div class="form-group">
     <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+    <input type="email" class="form-control" ng-model="email">
   </div>
 
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <input type="password" class="form-control" ng-model="password">
   </div>
 
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div>
 
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
 </form>
+
+<!-- -->
+<!-- defines LoginCtrl
+<script src="apps.js"></script>-->
+<script src="apps/login/login.module.js"></script>
+<script src="apps/login/login.controller.js"></script>
