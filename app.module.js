@@ -5,6 +5,7 @@
       angular.module('app', [
 
         'ngRoute',
+        'ngMessages',
 
         'app.login',
         'home.module'])
@@ -14,7 +15,9 @@
               "mode": "dev",
               "name": "OneTime",
               "version": "1.0",
-              "company": "ACompanyName"
+              "company": "ACompanyName",
+              "uas_url": "http://uas.apps.yookosapps.com/api/v1/",
+              "client_token": ""
         });
 
 

@@ -14,19 +14,8 @@
           });
     }])
     */
-    .controller('LoginCtrl', LoginCtrl)
+    /**
+      Karma needs to have visibility of this file to be able to use this module
+    */
 
-    function LoginCtrl($log, $scope, $http, $window, myConfig){
-        $log.debug("LoginCtrl");
-        $scope.hello = "Hello world";
-
-        // Using a constant defined in app.js
-        $log.log(myConfig.name);
-
-        $scope.login = function(){
-          $log.log("Run the login function");
-          //$window.alert("Login in");
-          $log.log($scope.email, $scope.password);
-        }
-    }
 })();
