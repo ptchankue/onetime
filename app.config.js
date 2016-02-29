@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-      angular.module('app', [])
+      angular.module('app') //don't put the []
         .constant("myConfig", {
               "mode": "dev",
               "name": "OneTime",
