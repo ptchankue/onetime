@@ -10,15 +10,7 @@
         'app.login',
         'home.module'])
 
-        .controller('MainCtrl', MainCtrl)
-        .constant("myConfig", {
-              "mode": "dev",
-              "name": "OneTime",
-              "version": "1.0",
-              "company": "ACompanyName",
-              "uas_url": "http://uas.apps.yookosapps.com/api/v1/",
-              "client_token": ""
-        });
+        .controller('MainCtrl', MainCtrl);
 
 
     function MainCtrl($scope, $rootScope, $window, $log, $location, myConfig) {
@@ -28,6 +20,7 @@
           var user = JSON.parse($window.localStorage['currentUser'] || '{}');
           $log.log(user);
           $rootScope.isLogged = true;
+          $location.path('/home' || '/')
 
       } else {
           $log.log('>>> Not logged yet!\nRedirect to login');

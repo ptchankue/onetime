@@ -1,3 +1,6 @@
+(function () {
+    'use strict';
+
 angular.module('app')
 
   .config(['$routeProvider',
@@ -16,8 +19,15 @@ angular.module('app')
           controller: 'LoginCtrl',
 
         }).
+        when('/logout', {
+          templateUrl: 'apps/login/login.view.html',
+          controller: 'LogoutCtrl',
+
+        }).
         otherwise({
           redirectTo: '/'
         });
     }
   ])
+
+})();
