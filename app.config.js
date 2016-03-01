@@ -11,7 +11,9 @@
               "client_token": ""
         })
         .config(function($logProvider){
-          $logProvider.debugEnabled(true);
+
+            $logProvider.debugEnabled(true);
+
         });
 
 })();
